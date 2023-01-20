@@ -1,0 +1,31 @@
+// Java code to implement the approach
+class GFG {
+
+// Function to find number of integers
+// satisfying the condition
+public static int countOfvalues(int N)
+{
+
+	// Stores the resultant count of pairs
+	int count = 0;
+
+	for (int i = 0; i < (1 << N); i++) {
+
+	// Iterate over the range
+	if ((i ^ (i + 1)) == ((i + 2) ^ (i + 3)))
+		count += 1;
+	}
+	return count;
+}
+
+// Driver code
+public static void main(String[] args)
+{
+	int N = 3;
+
+	// Function call
+	System.out.println(countOfvalues(N));
+}
+}
+
+// This code is contributed by phasing17
